@@ -217,7 +217,7 @@ class RoutePublisher(Node):
     def disarm(self):
         self.publish_vehicle_command(VehicleCommand.VEHICLE_CMD_COMPONENT_ARM_DISARM, 0.0, 0.0)
 
-    # publish the setpoints from the control interface
+    # publish the vehicle commands (arm, disarm, etc.)
     def publish_vehicle_command(self, command, param1, param2):
         msg = VehicleCommand()
         msg.timestamp = self.timestamp_
